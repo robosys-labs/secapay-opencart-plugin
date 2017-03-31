@@ -32,16 +32,7 @@
           <div class="tab-content">
             <div class="tab-pane active" id="tab-general">
               
-              <div class="form-group required">
-                <label class="col-sm-2 control-label" for="entry-email"><?php echo $entry_email; ?></label>
-                <div class="col-sm-10">
-                  <input type="text" name="sc_pay_email" value="<?php echo $sc_pay_email; ?>" placeholder="<?php echo $entry_email; ?>" id="entry-email" class="form-control"/>
-                  <?php if ($error_email) { ?>
-                  <div class="text-danger"><?php echo $error_email; ?></div>
-                  <?php } ?>
-                </div>
-              </div>
-
+            
               <div class="form-group required">
                 <label class="col-sm-2 control-label" for="entry-button_link"><?php echo $entry_button_link; ?></label>
                 <div class="col-sm-10">
@@ -66,43 +57,7 @@
                   </select>
                 </div>
               </div>
-              <div class="form-group">
-                <label class="col-sm-2 control-label" for="input-debug"><span data-toggle="tooltip" title="<?php echo $help_debug; ?>"><?php echo $entry_debug; ?></span></label>
-                <div class="col-sm-10">
-                  <select name="sc_pay_debug" id="input-debug" class="form-control">
-                    <?php if ($sc_pay_debug) { ?>
-                    <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-                    <option value="0"><?php echo $text_disabled; ?></option>
-                    <?php } else { ?>
-                    <option value="1"><?php echo $text_enabled; ?></option>
-                    <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
-                    <?php } ?>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-2 control-label" for="input-transaction"><?php echo $entry_transaction; ?></label>
-                <div class="col-sm-10">
-                  <select name="sc_pay_transaction" id="input-transaction" class="form-control">
-                    <?php if (!$sc_pay_transaction) { ?>
-                    <option value="0" selected="selected"><?php echo $text_authorization; ?></option>
-                    <?php } else { ?>
-                    <option value="0"><?php echo $text_authorization; ?></option>
-                    <?php } ?>
-                    <?php if ($sc_pay_transaction) { ?>
-                    <option value="1" selected="selected"><?php echo $text_sale; ?></option>
-                    <?php } else { ?>
-                    <option value="1"><?php echo $text_sale; ?></option>
-                    <?php } ?>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-2 control-label" for="input-total"><span data-toggle="tooltip" title="<?php echo $help_total; ?>"><?php echo $entry_total; ?></span></label>
-                <div class="col-sm-10">
-                  <input type="text" name="sc_pay_total" value="<?php echo $sc_pay_total; ?>" placeholder="<?php echo $entry_total; ?>" id="input-total" class="form-control"/>
-                </div>
-              </div>
+              
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-geo-zone"><?php echo $entry_geo_zone; ?></label>
                 <div class="col-sm-10">
@@ -140,20 +95,7 @@
               </div>
             </div>
             <div class="tab-pane" id="tab-status">
-              <div class="form-group">
-                <label class="col-sm-2 control-label" for="input-canceled-reversal-status"><?php echo $entry_canceled_reversal_status; ?></label>
-                <div class="col-sm-10">
-                  <select name="sc_pay_canceled_reversal_status_id" id="input-canceled-reversal-status" class="form-control">
-                    <?php foreach ($order_statuses as $order_status) { ?>
-                    <?php if ($order_status['order_status_id'] == $sc_pay_canceled_reversal_status_id) { ?>
-                    <option value="<?php echo $order_status['order_status_id']; ?>" selected="selected"><?php echo $order_status['name']; ?></option>
-                    <?php } else { ?>
-                    <option value="<?php echo $order_status['order_status_id']; ?>"><?php echo $order_status['name']; ?></option>
-                    <?php } ?>
-                    <?php } ?>
-                  </select>
-                </div>
-              </div>
+              
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-completed-status"><?php echo $entry_completed_status; ?></label>
                 <div class="col-sm-10">
@@ -168,34 +110,7 @@
                   </select>
                 </div>
               </div>
-              <div class="form-group">
-                <label class="col-sm-2 control-label" for="input-denied-status"><?php echo $entry_denied_status; ?></label>
-                <div class="col-sm-10">
-                  <select name="sc_pay_denied_status_id" id="input-denied-status" class="form-control">
-                    <?php foreach ($order_statuses as $order_status) { ?>
-                    <?php if ($order_status['order_status_id'] == $sc_pay_denied_status_id) { ?>
-                    <option value="<?php echo $order_status['order_status_id']; ?>" selected="selected"><?php echo $order_status['name']; ?></option>
-                    <?php } else { ?>
-                    <option value="<?php echo $order_status['order_status_id']; ?>"><?php echo $order_status['name']; ?></option>
-                    <?php } ?>
-                    <?php } ?>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-2 control-label" for="input-expired-status"><?php echo $entry_expired_status; ?></label>
-                <div class="col-sm-10">
-                  <select name="sc_pay_expired_status_id" id="input-expired-status" class="form-control">
-                    <?php foreach ($order_statuses as $order_status) { ?>
-                    <?php if ($order_status['order_status_id'] == $sc_pay_expired_status_id) { ?>
-                    <option value="<?php echo $order_status['order_status_id']; ?>" selected="selected"><?php echo $order_status['name']; ?></option>
-                    <?php } else { ?>
-                    <option value="<?php echo $order_status['order_status_id']; ?>"><?php echo $order_status['name']; ?></option>
-                    <?php } ?>
-                    <?php } ?>
-                  </select>
-                </div>
-              </div>
+              
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-failed-status"><?php echo $entry_failed_status; ?></label>
                 <div class="col-sm-10">
@@ -224,62 +139,7 @@
                   </select>
                 </div>
               </div>
-              <div class="form-group">
-                <label class="col-sm-2 control-label" for="input-processed-status"><?php echo $entry_processed_status; ?></label>
-                <div class="col-sm-10">
-                  <select name="sc_pay_processed_status_id" id="input-processed-status" class="form-control">
-                    <?php foreach ($order_statuses as $order_status) { ?>
-                    <?php if ($order_status['order_status_id'] == $sc_pay_processed_status_id) { ?>
-                    <option value="<?php echo $order_status['order_status_id']; ?>" selected="selected"><?php echo $order_status['name']; ?></option>
-                    <?php } else { ?>
-                    <option value="<?php echo $order_status['order_status_id']; ?>"><?php echo $order_status['name']; ?></option>
-                    <?php } ?>
-                    <?php } ?>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-2 control-label" for="input-refunded-status"><?php echo $entry_refunded_status; ?></label>
-                <div class="col-sm-10">
-                  <select name="sc_pay_refunded_status_id" id="input-refunded-status" class="form-control">
-                    <?php foreach ($order_statuses as $order_status) { ?>
-                    <?php if ($order_status['order_status_id'] == $sc_pay_refunded_status_id) { ?>
-                    <option value="<?php echo $order_status['order_status_id']; ?>" selected="selected"><?php echo $order_status['name']; ?></option>
-                    <?php } else { ?>
-                    <option value="<?php echo $order_status['order_status_id']; ?>"><?php echo $order_status['name']; ?></option>
-                    <?php } ?>
-                    <?php } ?>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-2 control-label" for="input-reversed-status"><?php echo $entry_reversed_status; ?></label>
-                <div class="col-sm-10">
-                  <select name="sc_pay_reversed_status_id" id="input-reversed-status" class="form-control">
-                    <?php foreach ($order_statuses as $order_status) { ?>
-                    <?php if ($order_status['order_status_id'] == $sc_pay_reversed_status_id) { ?>
-                    <option value="<?php echo $order_status['order_status_id']; ?>" selected="selected"><?php echo $order_status['name']; ?></option>
-                    <?php } else { ?>
-                    <option value="<?php echo $order_status['order_status_id']; ?>"><?php echo $order_status['name']; ?></option>
-                    <?php } ?>
-                    <?php } ?>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-2 control-label" for="input-void-status"><?php echo $entry_voided_status; ?></label>
-                <div class="col-sm-10">
-                  <select name="sc_pay_voided_status_id" id="input-void-status" class="form-control">
-                    <?php foreach ($order_statuses as $order_status) { ?>
-                    <?php if ($order_status['order_status_id'] == $sc_pay_voided_status_id) { ?>
-                    <option value="<?php echo $order_status['order_status_id']; ?>" selected="selected"><?php echo $order_status['name']; ?></option>
-                    <?php } else { ?>
-                    <option value="<?php echo $order_status['order_status_id']; ?>"><?php echo $order_status['name']; ?></option>
-                    <?php } ?>
-                    <?php } ?>
-                  </select>
-                </div>
-              </div>
+             
             </div>
           </div>
         </form>

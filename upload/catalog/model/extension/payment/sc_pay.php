@@ -4,10 +4,8 @@ class ModelExtensionPaymentSCPAY extends Model {
 		$this->load->language('extension/payment/sc_pay');
 
 		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "zone_to_geo_zone WHERE geo_zone_id = '" . (int)$this->config->get('sc_pay_geo_zone_id') . "' AND country_id = '" . (int)$address['country_id'] . "' AND (zone_id = '" . (int)$address['zone_id'] . "' OR zone_id = '0')");
-
-		if ($this->config->get('sc_pay_total') > $total) {
-			$status = false;
-		} elseif (!$this->config->get('sc_pay_geo_zone_id')) {
+		
+		if (!$this->config->get('sc_pay_geo_zone_id')) {
 			$status = true;
 		} elseif ($query->num_rows) {
 			$status = true;
@@ -17,31 +15,7 @@ class ModelExtensionPaymentSCPAY extends Model {
 
 		$currencies = array(
 			'NGN',
-			'AUD',
-			'CAD',
-			'EUR',
-			'GBP',
-			'JPY',
-			'USD',
-			'NZD',
-			'CHF',
-			'HKD',
-			'SGD',
-			'SEK',
-			'DKK',
-			'PLN',
-			'NOK',
-			'HUF',
-			'CZK',
-			'ILS',
-			'MXN',
-			'MYR',
-			'BRL',
-			'PHP',
-			'TWD',
-			'THB',
-			'TRY',
-			'RUB'
+			'USD'
 		);
 
 		if (!in_array(strtoupper($this->session->data['currency']), $currencies)) {

@@ -25,16 +25,15 @@ This Plugin allows you to accept Secapay Payments removing the need for you to m
 4. You can create a button through your dashboard. If you are trying to
 receive money for your business, you’re advised to create a ‘Business button’.
 5. Click the code symbol -- ‘<>’ for the button you just generated. You’ll
-see something similar to: https://demo.secapay.com/pay?button=1&amount=50. This is a button link, copy it.
+see something similar to: https://demo.secapay.com/pay?button=1&amount=50. This is a button ID copy it.
 
 
 == Configuration ==
 
 1. Go to Admin -> Extensions -> Payments and enable Secapay Button Payment.
 2. Click on the Edit link.
-3. Enter your registered email with Secapay.
-4. Paste the button link which was copied from secapay into the button link field.
-5. Leave the remaining fields as Sandbox Mode:No, Debug Mode:Disabled, Total:30, Geo Zone:All Zones and Status:Enabled.
+3. Paste the button ID which was copied from secapay into the button ID field.
+4. Leave the remaining fields as Sandbox Mode:No, Geo Zone:All Zones and Status:Enabled.
 6. Make sure the status is enabled.
 7. Click on Order Status and configure according to the respective fields.
 8. Save Changes and your plugin is ready for use.
