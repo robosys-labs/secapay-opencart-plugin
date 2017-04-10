@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 === Secapay Plugin for OpenCart===
+=======
+=== Secapay Payment Plugin for OpenCart===
+>>>>>>> ea2730cf5301f0904baaec3089a212a4210041e3
 Contributors: sci
 Tags: ecommerce, payment gateway, opencart, secapay form, sci.ng, secapay.com
 Requires at least: 2.3
@@ -7,7 +11,11 @@ Tested up to: 2.3.0.2
 Stable tag: 0.0.1
 License: 
 
+<<<<<<< HEAD
 Secapay Opencart Plugin for accepting payments on your OpenCart Store.
+=======
+Secapay Form Gateway for accepting payments on your OpenCart Store.
+>>>>>>> ea2730cf5301f0904baaec3089a212a4210041e3
 
 == Description ==
 
@@ -27,6 +35,7 @@ receive money for your business, you’re advised to create a ‘Business button’.
 5. Click the code symbol -- ‘<>’ for the button you just generated. You’ll
 see something similar to: https://demo.secapay.com/pay?button=1&amount=50. The button id for this button is 1.
 6. Copy the button id of the button you just created. 
+
 
 
 == Configuration ==
